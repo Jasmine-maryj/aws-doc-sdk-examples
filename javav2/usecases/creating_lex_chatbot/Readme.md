@@ -507,7 +507,7 @@ The **index.html** file is the application's home view that displays the Amazon 
             var conversationDiv = document.getElementById('conversation');
             var requestPara = document.createElement("P");
             requestPara.className = 'userRequest';
-            requestPara.appendChild(document.createTextNode(g_text));
+            requestPara.appendChild(document.createTextNode(daText));
             conversationDiv.appendChild(requestPara);
             conversationDiv.scrollTop = conversationDiv.scrollHeight;
         }
@@ -534,7 +534,7 @@ The **index.html** file is the application's home view that displays the Amazon 
                 data: 'text=' + text,
                 success: function (data, status, xhr) {
 
-                   showRequest();
+                   showRequest(text);
                    showResponse(data);
 
                     // re-enable input
